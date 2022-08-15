@@ -1,4 +1,6 @@
 FROM node:12
+ARG MAX_OLD_SPACE_SIZE=4096
+ENV NODE_OPTIONS=--max-old-space-size=${MAX_OLD_SPACE_SIZE}
 # Create app directory
 WORKDIR /usr/src/app
 # Install app dependencies
